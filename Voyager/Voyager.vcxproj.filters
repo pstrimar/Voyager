@@ -7,6 +7,12 @@
     <Filter Include="Voyager\Events">
       <UniqueIdentifier>{06B7759F-F284-69A5-DB18-DACBC785450A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Voyager\Platform">
+      <UniqueIdentifier>{F697DD6F-E290-FCC1-0BC3-E146F71ADCCD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voyager\Platform\Windows">
+      <UniqueIdentifier>{30D826D9-1CFD-7559-4548-5BE931CC7477}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Voyager.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Voyager\Log.h">
       <Filter>Voyager</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h">
+      <Filter>Voyager\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Window.h">
+      <Filter>Voyager</Filter>
+    </ClInclude>
     <ClInclude Include="src\vgrpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Log.cpp">
       <Filter>Voyager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Voyager\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\vgrpch.cpp" />
   </ItemGroup>
