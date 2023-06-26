@@ -1,0 +1,3 @@
+[submodule "Voyager/vendor/spdlog"]
+	path = Voyager/vendor/spdlog
+	url = https://github.com/gabime/spdlog
