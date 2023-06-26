@@ -4,6 +4,9 @@
     <Filter Include="Voyager">
       <UniqueIdentifier>{622D81EB-CE0C-0087-D724-8B5D438366E8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Voyager\Events">
+      <UniqueIdentifier>{06B7759F-F284-69A5-DB18-DACBC785450A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Voyager.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\EntryPoint.h">
       <Filter>Voyager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Events\ApplicationEvent.h">
+      <Filter>Voyager\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Events\Event.h">
+      <Filter>Voyager\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Events\KeyEvent.h">
+      <Filter>Voyager\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Events\MouseEvent.h">
+      <Filter>Voyager\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Log.h">
       <Filter>Voyager</Filter>
