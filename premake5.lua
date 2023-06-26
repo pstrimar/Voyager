@@ -19,6 +19,9 @@ project "Voyager"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "vgrpch.h"
+	pchsource "Voyager/src/vgrpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

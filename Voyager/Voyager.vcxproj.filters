@@ -34,6 +34,7 @@
     <ClInclude Include="src\Voyager\Log.h">
       <Filter>Voyager</Filter>
     </ClInclude>
+    <ClInclude Include="src\vgrpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Voyager\Log.cpp">
       <Filter>Voyager</Filter>
     </ClCompile>
+    <ClCompile Include="src\vgrpch.cpp" />
   </ItemGroup>
 </Project>

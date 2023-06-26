@@ -2,9 +2,6 @@
 
 #include "Voyager/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Voyager {
 
 	// Events in Voyager are currently blocking, meaning when an event occurs, it

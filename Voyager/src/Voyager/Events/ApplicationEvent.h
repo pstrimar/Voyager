@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Voyager {
 
 	class VOYAGER_API WindowResizeEvent : public Event
