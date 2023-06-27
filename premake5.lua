@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Voyager/vendor/GLFW/include"
+IncludeDir["Glad"] = "Voyager/vendor/Glad/include"
 
 include "Voyager/vendor/GLFW"
+include "Voyager/vendor/Glad"
 
 project "Voyager"
 	location "Voyager"
@@ -38,12 +40,14 @@ project "Voyager"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -56,7 +60,8 @@ project "Voyager"
 		defines
 		{
 			"VGR_PLATFORM_WINDOWS",
-			"VGR_BUILD_DLL"
+			"VGR_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
