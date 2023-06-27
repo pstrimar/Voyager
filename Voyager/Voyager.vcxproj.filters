@@ -37,6 +37,12 @@
     <ClInclude Include="src\Voyager\Events\MouseEvent.h">
       <Filter>Voyager\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Layer.h">
+      <Filter>Voyager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\LayerStack.h">
+      <Filter>Voyager</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Log.h">
       <Filter>Voyager</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">
+      <Filter>Voyager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Layer.cpp">
+      <Filter>Voyager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\LayerStack.cpp">
       <Filter>Voyager</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Log.cpp">

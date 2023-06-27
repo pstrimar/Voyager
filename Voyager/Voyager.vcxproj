@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -110,6 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -137,6 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -160,6 +163,8 @@
     <ClInclude Include="src\Voyager\Events\Event.h" />
     <ClInclude Include="src\Voyager\Events\KeyEvent.h" />
     <ClInclude Include="src\Voyager\Events\MouseEvent.h" />
+    <ClInclude Include="src\Voyager\Layer.h" />
+    <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Window.h" />
@@ -167,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp" />
+    <ClCompile Include="src\Voyager\Layer.cpp" />
+    <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\vgrpch.cpp">
