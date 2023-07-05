@@ -7,8 +7,14 @@
     <Filter Include="Voyager\Events">
       <UniqueIdentifier>{06B7759F-F284-69A5-DB18-DACBC785450A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Voyager\ImGui">
+      <UniqueIdentifier>{0CA4C2AF-7864-3EE6-419F-8763AD1E83C2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Voyager\Platform">
       <UniqueIdentifier>{F697DD6F-E290-FCC1-0BC3-E146F71ADCCD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Voyager\Platform\OpenGL">
+      <UniqueIdentifier>{6AF06C13-D627-B5AA-DF31-19CE4BE8DBA3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Voyager\Platform\Windows">
       <UniqueIdentifier>{30D826D9-1CFD-7559-4548-5BE931CC7477}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Voyager\Events\MouseEvent.h">
       <Filter>Voyager\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h">
+      <Filter>Voyager\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Layer.h">
       <Filter>Voyager</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\Log.h">
       <Filter>Voyager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Voyager\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h">
       <Filter>Voyager\Platform\Windows</Filter>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Voyager\Application.cpp">
       <Filter>Voyager</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp">
+      <Filter>Voyager\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Layer.cpp">
       <Filter>Voyager</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Log.cpp">
       <Filter>Voyager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Voyager\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp">
       <Filter>Voyager\Platform\Windows</Filter>
