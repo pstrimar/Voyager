@@ -14,7 +14,7 @@
 	#define VGR_ENABLE_ASSERTS
 #endif
 
-#ifdef VGR_ENABLE_ASSERTS
+#ifdef  VGR_ENABLE_ASSERTS
 	#define VGR_ASSERT(x, ...) { if(!(x)) { VGR_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define VGR_CORE_ASSERT(x, ...) { if(!(x)) { VGR_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else

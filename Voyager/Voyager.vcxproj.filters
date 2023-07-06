@@ -65,6 +65,8 @@
       <Filter>Voyager</Filter>
     </ClInclude>
     <ClInclude Include="src\vgrpch.h" />
+    <ClInclude Include="src\Voyager\Input.h" />
+    <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">
@@ -89,5 +91,6 @@
       <Filter>Voyager\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\vgrpch.cpp" />
+    <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

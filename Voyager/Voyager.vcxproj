@@ -161,10 +161,12 @@
     <ClInclude Include="src\Voyager\Events\KeyEvent.h" />
     <ClInclude Include="src\Voyager\Events\MouseEvent.h" />
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Voyager\Input.h" />
     <ClInclude Include="src\Voyager\Layer.h" />
     <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Window.h" />
     <ClInclude Include="src\vgrpch.h" />
@@ -176,6 +178,7 @@
     <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\vgrpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
