@@ -67,6 +67,8 @@
     <ClInclude Include="src\vgrpch.h" />
     <ClInclude Include="src\Voyager\Input.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Voyager\KeyCodes.h" />
+    <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">

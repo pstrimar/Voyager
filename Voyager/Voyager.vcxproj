@@ -162,9 +162,11 @@
     <ClInclude Include="src\Voyager\Events\MouseEvent.h" />
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Voyager\Input.h" />
+    <ClInclude Include="src\Voyager\KeyCodes.h" />
     <ClInclude Include="src\Voyager\Layer.h" />
     <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
+    <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />

@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		VGR_INFO("ExampleLayer::Update");
+		if (Voyager::Input::IsKeyPressed(VGR_KEY_TAB))
+			VGR_TRACE("Tab key is pressed! (poll)");
 	}
 
 	void OnEvent(Voyager::Event& event) override
 	{
-		VGR_TRACE("{0}", event);
+		if (event.GetEventType() == Voyager::EventType::KeyPressed)
+		{
+			Voyager::KeyPressedEvent& e = (Voyager::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == VGR_KEY_TAB)
+				VGR_TRACE("Tab key is pressed! (event)");
+			VGR_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 
