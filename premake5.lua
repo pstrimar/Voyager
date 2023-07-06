@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Voyager/vendor/GLFW/include"
 IncludeDir["Glad"] = "Voyager/vendor/Glad/include"
 IncludeDir["ImGui"] = "Voyager/vendor/imgui"
+IncludeDir["glm"] = "Voyager/vendor/glm"
 
 include "Voyager/vendor/GLFW"
 include "Voyager/vendor/Glad"
@@ -36,7 +37,9 @@ project "Voyager"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
 
 	includedirs
@@ -45,7 +48,8 @@ project "Voyager"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -106,7 +110,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Voyager/vendor/spdlog/include",
-		"Voyager/src"
+		"Voyager/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
