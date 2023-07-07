@@ -6,6 +6,8 @@
 #include "Voyager/LayerStack.h"
 #include "Voyager/Events/ApplicationEvent.h"
 
+#include "Voyager/ImGui/ImGuiLayer.h"
+
 namespace Voyager {
 
 	class VOYAGER_API Application
@@ -28,6 +30,7 @@ namespace Voyager {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

@@ -111,7 +111,8 @@ project "Sandbox"
 	{
 		"Voyager/vendor/spdlog/include",
 		"Voyager/src",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"Voyager/vendor"
 	}
 
 	links

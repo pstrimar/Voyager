@@ -167,7 +167,6 @@
     <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
     <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
-    <ClInclude Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Window.h" />
@@ -591,12 +590,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp" />
+    <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />
     <ClCompile Include="src\Voyager\Layer.cpp" />
     <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />
-    <ClCompile Include="src\Voyager\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\vgrpch.cpp">
