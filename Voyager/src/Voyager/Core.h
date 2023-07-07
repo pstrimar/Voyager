@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef VGR_PLATFORM_WINDOWS
+#if VGR_DYNAMIC_LINK
 	#ifdef VGR_BUILD_DLL
 		#define VOYAGER_API __declspec(dllexport)
 	#else 
 		#define VOYAGER_API __declspec(dllimport)
 	#endif
+#else
+	#define VOYAGER_API
+#endif
 #else
 	#error Voyager only supports Windows!
 #endif
