@@ -592,6 +592,7 @@
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />
     <ClCompile Include="src\Voyager\Layer.cpp" />
     <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />

@@ -1382,5 +1382,6 @@
     <ClCompile Include="src\vgrpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />
   </ItemGroup>
 </Project>
