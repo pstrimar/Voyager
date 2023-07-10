@@ -158,8 +158,10 @@
     <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
     <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Voyager\Window.h" />
     <ClInclude Include="src\vgrpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -587,6 +589,7 @@
     <ClCompile Include="src\Voyager\Layer.cpp" />
     <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\vgrpch.cpp">
