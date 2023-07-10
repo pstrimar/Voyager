@@ -1349,6 +1349,7 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Voyager\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">
@@ -1382,5 +1383,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

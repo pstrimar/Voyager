@@ -162,6 +162,7 @@
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Voyager\Renderer\Shader.h" />
     <ClInclude Include="src\Voyager\Window.h" />
     <ClInclude Include="src\vgrpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -595,6 +596,7 @@
     <ClCompile Include="src\vgrpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
