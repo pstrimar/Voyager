@@ -1360,6 +1360,7 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Voyager\Core\Timestep.h" />
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Application.cpp">
@@ -1403,5 +1404,6 @@
     <ClCompile Include="src\Voyager\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>
