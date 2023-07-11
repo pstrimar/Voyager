@@ -146,6 +146,7 @@
     <ClInclude Include="src\Voyager.h" />
     <ClInclude Include="src\Voyager\Application.h" />
     <ClInclude Include="src\Voyager\Core.h" />
+    <ClInclude Include="src\Voyager\Core\Timestep.h" />
     <ClInclude Include="src\Voyager\EntryPoint.h" />
     <ClInclude Include="src\Voyager\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Voyager\Events\Event.h" />

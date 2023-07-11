@@ -5,6 +5,8 @@
 #include "Voyager/Layer.h"
 #include "Voyager/Log.h"
 
+#include "Voyager/Core/Timestep.h"
+
 #include "Voyager/Input.h"
 #include "Voyager/MouseButtonCodes.h"
 #include "Voyager/KeyCodes.h"

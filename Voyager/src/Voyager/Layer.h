@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Voyager/Core.h"
+#include "Voyager/Core/Timestep.h"
 #include "Voyager/Events/Event.h"
 
 namespace Voyager {
@@ -13,7 +14,7 @@ namespace Voyager {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
