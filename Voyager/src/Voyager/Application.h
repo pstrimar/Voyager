@@ -8,14 +8,9 @@
 
 #include "Voyager/ImGui/ImGuiLayer.h"
 
-#include "Voyager/Renderer/Shader.h"
-#include "Voyager/Renderer/Buffer.h"
-#include "Voyager/Renderer/VertexArray.h"
-#include "Voyager/Renderer/OrthographicCamera.h"
-
 namespace Voyager {
 
-	class VOYAGER_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -37,15 +32,7 @@ namespace Voyager {
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
-		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
+		LayerStack m_LayerStack;		
 	private:
 		static Application* s_Instance;
 	};
