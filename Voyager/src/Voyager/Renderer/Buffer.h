@@ -1,8 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <string>
-
 namespace Voyager {
 
 	enum class ShaderDataType
