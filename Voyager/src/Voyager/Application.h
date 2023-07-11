@@ -11,6 +11,7 @@
 #include "Voyager/Renderer/Shader.h"
 #include "Voyager/Renderer/Buffer.h"
 #include "Voyager/Renderer/VertexArray.h"
+#include "Voyager/Renderer/OrthographicCamera.h"
 
 namespace Voyager {
 
@@ -43,6 +44,8 @@ namespace Voyager {
 		std::shared_ptr<VertexArray> m_VertexArray;
 
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

@@ -160,12 +160,16 @@
     <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Voyager\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Voyager\Renderer\Renderer.h" />
+    <ClInclude Include="src\Voyager\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Voyager\Renderer\Shader.h" />
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h" />
     <ClInclude Include="src\Voyager\Window.h" />
@@ -597,6 +601,7 @@
     <ClCompile Include="src\Voyager\Log.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
@@ -604,7 +609,10 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Shader.cpp" />
     <ClCompile Include="src\Voyager\Renderer\VertexArray.cpp" />
   </ItemGroup>
