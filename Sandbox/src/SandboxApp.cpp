@@ -96,8 +96,6 @@ public:
 			}			
 		)";
 
-		m_Shader.reset(Voyager::Shader::Create(vertexSrc, fragmentSrc));
-
 		std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
 
@@ -132,40 +130,7 @@ public:
 
 		m_FlatColorShader.reset(Voyager::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
 
-		std::string textureShaderVertexSrc = R"(
-			#version 330 core
-
-			layout(location = 0) in vec3 a_Position;
-			layout(location = 1) in vec2 a_TexCoord;
-
-			uniform mat4 u_ViewProjection;
-			uniform mat4 u_Transform;
-
-			out vec2 v_TexCoord;
-	
-			void main()
-			{
-				v_TexCoord = a_TexCoord;
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
-			}			
-		)";
-
-		std::string textureShaderFragmentSrc = R"(
-			#version 330 core
-
-			layout(location = 0) out vec4 color;
-
-			in vec2 v_TexCoord;
-
-			uniform sampler2D u_Texture;
-	
-			void main()
-			{
-				color = texture(u_Texture, v_TexCoord);
-			}			
-		)";
-
-		m_TextureShader.reset(Voyager::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+		m_TextureShader.reset(Voyager::Shader::Create("assets/shaders/Texture.glsl"));
 
 		m_Texture = Voyager::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_TransparentTexture = Voyager::Texture2D::Create("assets/textures/Spiderman.png");
@@ -223,9 +188,6 @@ public:
 		m_TransparentTexture->Bind();
 		Voyager::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
-		// Triangle
-		// Voyager::Renderer::Submit(m_Shader, m_VertexArray);
-
 		Voyager::Renderer::EndScene();
 	}
 
@@ -241,7 +203,6 @@ public:
 
 	}
 private:
-	Voyager::Ref<Voyager::Shader> m_Shader;
 	Voyager::Ref<Voyager::Shader> m_FlatColorShader, m_TextureShader;
 	Voyager::Ref<Voyager::VertexArray> m_VertexArray;
 
