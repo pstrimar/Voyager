@@ -128,15 +128,17 @@ public:
 			}			
 		)";
 
-		m_FlatColorShader.reset(Voyager::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_VertexPosColorShader = Voyager::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
-		m_TextureShader.reset(Voyager::Shader::Create("assets/shaders/Texture.glsl"));
+		m_FlatColorShader = Voyager::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
+
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Voyager::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_TransparentTexture = Voyager::Texture2D::Create("assets/textures/Spiderman.png");
 
-		std::dynamic_pointer_cast<Voyager::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Voyager::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Voyager::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Voyager::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Voyager::Timestep ts) override
@@ -182,11 +184,16 @@ public:
 			}
 		}
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
+
 		m_Texture->Bind();
-		Voyager::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Voyager::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		m_TransparentTexture->Bind();
-		Voyager::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Voyager::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
+		// Triangle
+		// Voyager::Renderer::Submit(m_VertexPosColorShader, m_VertexArray);
 
 		Voyager::Renderer::EndScene();
 	}
@@ -203,7 +210,8 @@ public:
 
 	}
 private:
-	Voyager::Ref<Voyager::Shader> m_FlatColorShader, m_TextureShader;
+	Voyager::ShaderLibrary m_ShaderLibrary;
+	Voyager::Ref<Voyager::Shader> m_VertexPosColorShader, m_FlatColorShader;
 	Voyager::Ref<Voyager::VertexArray> m_VertexArray;
 
 	Voyager::Ref<Voyager::VertexArray> m_SquareVA;
