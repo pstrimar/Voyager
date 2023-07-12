@@ -21,7 +21,7 @@ public:
 			 0.0f,  0.5f, 0.0f,	0.8f, 0.8f, 0.2f, 1.0f,
 		};
 
-		std::shared_ptr<Voyager::VertexBuffer> vertexBuffer;
+		Voyager::Ref<Voyager::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Voyager::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Voyager::BufferLayout layout = {
@@ -33,30 +33,31 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Voyager::IndexBuffer> indexBuffer;
+		Voyager::Ref<Voyager::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Voyager::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA.reset(Voyager::VertexArray::Create());
 
-		float squareVertices[3 * 4] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.5f,  0.5f, 0.0f,
-			-0.5f,  0.5f, 0.0f,
+		float squareVertices[5 * 4] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		std::shared_ptr<Voyager::VertexBuffer> squareVB;
+		Voyager::Ref<Voyager::VertexBuffer> squareVB;
 		squareVB.reset(Voyager::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		squareVB->SetLayout({
-			{ Voyager::ShaderDataType::Float3, "a_Position" }
+			{ Voyager::ShaderDataType::Float3, "a_Position" },
+			{ Voyager::ShaderDataType::Float2, "a_TexCoord" }
 			});
 
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Voyager::IndexBuffer> squareIB;
+		Voyager::Ref<Voyager::IndexBuffer> squareIB;
 		squareIB.reset(Voyager::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -130,6 +131,47 @@ public:
 		)";
 
 		m_FlatColorShader.reset(Voyager::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+
+		std::string textureShaderVertexSrc = R"(
+			#version 330 core
+
+			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec2 a_TexCoord;
+
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
+
+			out vec2 v_TexCoord;
+	
+			void main()
+			{
+				v_TexCoord = a_TexCoord;
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
+			}			
+		)";
+
+		std::string textureShaderFragmentSrc = R"(
+			#version 330 core
+
+			layout(location = 0) out vec4 color;
+
+			in vec2 v_TexCoord;
+
+			uniform sampler2D u_Texture;
+	
+			void main()
+			{
+				color = texture(u_Texture, v_TexCoord);
+			}			
+		)";
+
+		m_TextureShader.reset(Voyager::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+
+		m_Texture = Voyager::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_TransparentTexture = Voyager::Texture2D::Create("assets/textures/Spiderman.png");
+
+		std::dynamic_pointer_cast<Voyager::OpenGLShader>(m_TextureShader)->Bind();
+		std::dynamic_pointer_cast<Voyager::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Voyager::Timestep ts) override
@@ -175,7 +217,14 @@ public:
 			}
 		}
 
-		Voyager::Renderer::Submit(m_Shader, m_VertexArray);
+		m_Texture->Bind();
+		Voyager::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
+		m_TransparentTexture->Bind();
+		Voyager::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
+		// Triangle
+		// Voyager::Renderer::Submit(m_Shader, m_VertexArray);
 
 		Voyager::Renderer::EndScene();
 	}
@@ -192,11 +241,13 @@ public:
 
 	}
 private:
-	std::shared_ptr<Voyager::Shader> m_Shader;
-	std::shared_ptr<Voyager::Shader> m_FlatColorShader;
-	std::shared_ptr<Voyager::VertexArray> m_VertexArray;
+	Voyager::Ref<Voyager::Shader> m_Shader;
+	Voyager::Ref<Voyager::Shader> m_FlatColorShader, m_TextureShader;
+	Voyager::Ref<Voyager::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Voyager::VertexArray> m_SquareVA;
+	Voyager::Ref<Voyager::VertexArray> m_SquareVA;
+
+	Voyager::Ref<Voyager::Texture2D> m_Texture, m_TransparentTexture;
 
 	Voyager::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;

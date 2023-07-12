@@ -18,6 +18,7 @@
 #include "Voyager/Renderer/RenderCommand.h"
 
 #include "Voyager/Renderer/Shader.h"
+#include "Voyager/Renderer/Texture.h"
 #include "Voyager/Renderer/Buffer.h"
 #include "Voyager/Renderer/VertexArray.h"
 
