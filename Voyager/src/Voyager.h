@@ -16,6 +16,7 @@
 
 // ---Renderer-------------------------
 #include "Voyager/Renderer/Renderer.h"
+#include "Voyager/Renderer/Renderer2D.h"
 #include "Voyager/Renderer/RenderCommand.h"
 
 #include "Voyager/Renderer/Shader.h"
