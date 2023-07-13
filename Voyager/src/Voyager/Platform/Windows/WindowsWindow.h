@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Voyager/Window.h"
+#include "Voyager/Core/Window.h"
 #include "Voyager/Renderer/GraphicsContext.h"
 
 #include "GLFW/glfw3.h"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Voyager/Layer.h"
+#include "Voyager/Core/Layer.h"
 
 #include "Voyager/Events/ApplicationEvent.h"
 #include "Voyager/Events/KeyEvent.h"

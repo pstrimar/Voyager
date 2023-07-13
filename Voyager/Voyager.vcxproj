@@ -144,22 +144,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Voyager.h" />
-    <ClInclude Include="src\Voyager\Application.h" />
-    <ClInclude Include="src\Voyager\Core.h" />
+    <ClInclude Include="src\Voyager\Core\Application.h" />
+    <ClInclude Include="src\Voyager\Core\Core.h" />
+    <ClInclude Include="src\Voyager\Core\EntryPoint.h" />
+    <ClInclude Include="src\Voyager\Core\Input.h" />
+    <ClInclude Include="src\Voyager\Core\KeyCodes.h" />
+    <ClInclude Include="src\Voyager\Core\Layer.h" />
+    <ClInclude Include="src\Voyager\Core\LayerStack.h" />
+    <ClInclude Include="src\Voyager\Core\Log.h" />
+    <ClInclude Include="src\Voyager\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Voyager\Core\Timestep.h" />
-    <ClInclude Include="src\Voyager\EntryPoint.h" />
+    <ClInclude Include="src\Voyager\Core\Window.h" />
     <ClInclude Include="src\Voyager\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Voyager\Events\Event.h" />
     <ClInclude Include="src\Voyager\Events\KeyEvent.h" />
     <ClInclude Include="src\Voyager\Events\MouseEvent.h" />
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Voyager\Input.h" />
-    <ClInclude Include="src\Voyager\KeyCodes.h" />
-    <ClInclude Include="src\Voyager\Layer.h" />
-    <ClInclude Include="src\Voyager\LayerStack.h" />
-    <ClInclude Include="src\Voyager\Log.h" />
-    <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
-    <ClInclude Include="src\Voyager\OrthographicCameraController.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -171,13 +171,13 @@
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Voyager\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Voyager\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Voyager\Renderer\Renderer.h" />
     <ClInclude Include="src\Voyager\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Voyager\Renderer\Shader.h" />
     <ClInclude Include="src\Voyager\Renderer\Texture.h" />
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Voyager\Window.h" />
     <ClInclude Include="src\vgrpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -598,14 +598,13 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Voyager\Application.cpp" />
+    <ClCompile Include="src\Voyager\Core\Application.cpp" />
+    <ClCompile Include="src\Voyager\Core\Layer.cpp" />
+    <ClCompile Include="src\Voyager\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Voyager\Core\Log.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />
-    <ClCompile Include="src\Voyager\Layer.cpp" />
-    <ClCompile Include="src\Voyager\LayerStack.cpp" />
-    <ClCompile Include="src\Voyager\Log.cpp" />
-    <ClCompile Include="src\Voyager\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp" />
@@ -616,6 +615,7 @@
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Voyager\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Voyager\Renderer\RendererAPI.cpp" />

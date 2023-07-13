@@ -2,7 +2,7 @@
 #include "WindowsInput.h"
 
 #include <GLFW/glfw3.h>
-#include "Voyager/Application.h"
+#include "Voyager/Core/Application.h"
 
 namespace Voyager {
 

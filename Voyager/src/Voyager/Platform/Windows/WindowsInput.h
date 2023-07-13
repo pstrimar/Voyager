@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Voyager/Input.h"
+#include "Voyager/Core/Input.h"
 
 namespace Voyager {
 

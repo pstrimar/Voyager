@@ -2,7 +2,7 @@
 
 #include "vgrpch.h"
 
-#include "Voyager/Core.h"
+#include "Voyager/Core/Core.h"
 #include "Voyager/Events/Event.h"
 
 namespace Voyager {

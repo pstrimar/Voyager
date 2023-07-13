@@ -57,17 +57,38 @@
     <ClInclude Include="src\Voyager.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Application.h">
-      <Filter>src\Voyager</Filter>
+    <ClInclude Include="src\Voyager\Core\Application.h">
+      <Filter>src\Voyager\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Core.h">
-      <Filter>src\Voyager</Filter>
+    <ClInclude Include="src\Voyager\Core\Core.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\EntryPoint.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\Input.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\KeyCodes.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\Layer.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\LayerStack.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\Log.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\MouseButtonCodes.h">
+      <Filter>src\Voyager\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Core\Timestep.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\EntryPoint.h">
-      <Filter>src\Voyager</Filter>
+    <ClInclude Include="src\Voyager\Core\Window.h">
+      <Filter>src\Voyager\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Events\ApplicationEvent.h">
       <Filter>src\Voyager\Events</Filter>
@@ -83,24 +104,6 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h">
       <Filter>src\Voyager\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\Input.h">
-      <Filter>src\Voyager</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\KeyCodes.h">
-      <Filter>src\Voyager</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\Layer.h">
-      <Filter>src\Voyager</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\LayerStack.h">
-      <Filter>src\Voyager</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\Log.h">
-      <Filter>src\Voyager</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\MouseButtonCodes.h">
-      <Filter>src\Voyager</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
@@ -135,6 +138,9 @@
     <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\OrthographicCameraController.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\RenderCommand.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
@@ -152,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h">
       <Filter>src\Voyager\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Voyager\Window.h">
-      <Filter>src\Voyager</Filter>
     </ClInclude>
     <ClInclude Include="src\vgrpch.h">
       <Filter>src</Filter>
@@ -1410,11 +1413,19 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Voyager\Application.cpp">
-      <Filter>src\Voyager</Filter>
+    <ClCompile Include="src\Voyager\Core\Application.cpp">
+      <Filter>src\Voyager\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Core\Layer.cpp">
+      <Filter>src\Voyager\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Core\LayerStack.cpp">
+      <Filter>src\Voyager\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Core\Log.cpp">
+      <Filter>src\Voyager\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp">
       <Filter>src\Voyager\ImGui</Filter>
@@ -1424,15 +1435,6 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp">
       <Filter>src\Voyager\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Voyager\Layer.cpp">
-      <Filter>src\Voyager</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Voyager\LayerStack.cpp">
-      <Filter>src\Voyager</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Voyager\Log.cpp">
-      <Filter>src\Voyager</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
@@ -1464,6 +1466,9 @@
     <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\OrthographicCameraController.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\RenderCommand.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
@@ -1488,6 +1493,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Voyager\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>

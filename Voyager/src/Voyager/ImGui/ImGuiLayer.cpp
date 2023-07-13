@@ -5,7 +5,7 @@
 #include "backends/imgui_impl_opengl3.h"
 #include "backends/imgui_impl_glfw.h"
 
-#include "Voyager/Application.h"
+#include "Voyager/Core/Application.h"
 
 // TEMPORARY
 #include <GLFW/glfw3.h>

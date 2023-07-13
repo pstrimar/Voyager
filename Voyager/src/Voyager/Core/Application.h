@@ -3,7 +3,7 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "Voyager/LayerStack.h"
+#include "Voyager/Core/LayerStack.h"
 #include "Voyager/Events/ApplicationEvent.h"
 
 #include "Voyager/Core/Timestep.h"

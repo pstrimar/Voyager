@@ -1,8 +1,8 @@
 #include "vgrpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Voyager/Input.h"
-#include "Voyager/KeyCodes.h"
+#include "Voyager/Core/Input.h"
+#include "Voyager/Core/KeyCodes.h"
 
 namespace Voyager {
 

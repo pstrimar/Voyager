@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "Voyager/Core.h"
+#include "Voyager/Core/Core.h"
 
 namespace Voyager {
 

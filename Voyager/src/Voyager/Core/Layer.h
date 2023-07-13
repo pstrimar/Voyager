@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Voyager/Core.h"
+#include "Voyager/Core/Core.h"
 #include "Voyager/Core/Timestep.h"
 #include "Voyager/Events/Event.h"
 

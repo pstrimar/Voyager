@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Voyager/Log.h"
+#include "Voyager/Core/Log.h"
 
 #ifdef VGR_PLATFORM_WINDOWS
 	#include <Windows.h>
