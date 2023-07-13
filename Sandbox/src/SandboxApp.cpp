@@ -11,7 +11,7 @@ class ExampleLayer : public Voyager::Layer
 {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f)
+		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
 		m_VertexArray.reset(Voyager::VertexArray::Create());
 
@@ -143,31 +143,14 @@ public:
 
 	void OnUpdate(Voyager::Timestep ts) override
 	{
-		if (Voyager::Input::IsKeyPressed(VGR_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
+		// Update
+		m_CameraController.OnUpdate(ts);
 
-		else if (Voyager::Input::IsKeyPressed(VGR_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed * ts;
-
-		if (Voyager::Input::IsKeyPressed(VGR_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed * ts;
-
-		else if (Voyager::Input::IsKeyPressed(VGR_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
-
-		if (Voyager::Input::IsKeyPressed(VGR_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed * ts;
-
-		if (Voyager::Input::IsKeyPressed(VGR_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed * ts;
-
+		// Render
 		Voyager::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Voyager::RenderCommand::Clear();
 
-		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(m_CameraRotation);
-
-		Voyager::Renderer::BeginScene(m_Camera);
+		Voyager::Renderer::BeginScene(m_CameraController.GetCamera());
 
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
@@ -190,7 +173,7 @@ public:
 		Voyager::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		m_TransparentTexture->Bind();
-		Voyager::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Voyager::Renderer::Submit(textureShader, m_SquareVA, glm::translate(glm::mat4(1.0f), glm::vec3(0.25f, -0.25f, 0.0f)) * glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		// Triangle
 		// Voyager::Renderer::Submit(m_VertexPosColorShader, m_VertexArray);
@@ -205,25 +188,17 @@ public:
 		ImGui::End();
 	}
 
-	void OnEvent(Voyager::Event& event) override
+	void OnEvent(Voyager::Event& e) override
 	{
-
+		m_CameraController.OnEvent(e);
 	}
 private:
 	Voyager::ShaderLibrary m_ShaderLibrary;
 	Voyager::Ref<Voyager::Shader> m_VertexPosColorShader, m_FlatColorShader;
 	Voyager::Ref<Voyager::VertexArray> m_VertexArray;
-
 	Voyager::Ref<Voyager::VertexArray> m_SquareVA;
-
 	Voyager::Ref<Voyager::Texture2D> m_Texture, m_TransparentTexture;
-
-	Voyager::OrthographicCamera m_Camera;
-	glm::vec3 m_CameraPosition;
-	float m_CameraRotation = 0.0f;
-	float m_CameraMoveSpeed = 5.0f;
-	float m_CameraRotationSpeed = 180.0f;
-
+	Voyager::OrthographicCameraController m_CameraController;
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 

@@ -8,8 +8,9 @@
 #include "Voyager/Core/Timestep.h"
 
 #include "Voyager/Input.h"
-#include "Voyager/MouseButtonCodes.h"
 #include "Voyager/KeyCodes.h"
+#include "Voyager/MouseButtonCodes.h"
+#include "Voyager/OrthographicCameraController.h"
 
 #include "Voyager/ImGui/ImGuiLayer.h"
 

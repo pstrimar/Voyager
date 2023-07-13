@@ -159,6 +159,7 @@
     <ClInclude Include="src\Voyager\LayerStack.h" />
     <ClInclude Include="src\Voyager\Log.h" />
     <ClInclude Include="src\Voyager\MouseButtonCodes.h" />
+    <ClInclude Include="src\Voyager\OrthographicCameraController.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -604,6 +605,7 @@
     <ClCompile Include="src\Voyager\Layer.cpp" />
     <ClCompile Include="src\Voyager\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Log.cpp" />
+    <ClCompile Include="src\Voyager\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp" />
