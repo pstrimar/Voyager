@@ -25,7 +25,3 @@
 
 #include "Voyager/Renderer/OrthographicCamera.h"
 // ------------------------------------
-
-// ---Entry Point----------------------
-#include "Voyager/Core/EntryPoint.h"
-// ------------------------------------

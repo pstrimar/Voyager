@@ -76,7 +76,6 @@ project "Voyager"
 
 		defines
 		{
-			"VGR_PLATFORM_WINDOWS",
 			"VGR_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
@@ -127,11 +126,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		systemversion "latest"
-
-		defines
-		{
-			"VGR_PLATFORM_WINDOWS"
-		}
 
 	filter "configurations:Debug"
 		defines "VGR_DEBUG"
