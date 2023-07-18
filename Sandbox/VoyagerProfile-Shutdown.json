@@ -1,1 +1,1 @@
-{"otherData": {},"traceEvents":[]}
+{"otherData": {},"traceEvents":[{"cat":"function","dur":1,"name":"__cdecl Voyager::Application::~Application(void)","ph":"X","pid":0,"tid":2318120415,"ts":105434247995},{"cat":"function","dur":56347,"name":"void __cdecl Voyager::WindowsWindow::Shutdown(void)","ph":"X","pid":0,"tid":2318120415,"ts":105434248149},{"cat":"function","dur":56505,"name":"__cdecl Voyager::WindowsWindow::~WindowsWindow(void)","ph":"X","pid":0,"tid":2318120415,"ts":105434248149}]}

@@ -27,26 +27,36 @@ namespace Voyager {
 
 	OpenGLVertexArray::OpenGLVertexArray()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glCreateVertexArrays(1, &m_RendererID);
 	}
 
 	OpenGLVertexArray::~OpenGLVertexArray()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glDeleteVertexArrays(1, &m_RendererID);
 	}
 
 	void Voyager::OpenGLVertexArray::Bind() const
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glBindVertexArray(m_RendererID);
 	}
 
 	void Voyager::OpenGLVertexArray::Unbind() const
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glBindVertexArray(0);
 	}
 
 	void OpenGLVertexArray::AddVertexBuffer(const Ref<VertexBuffer>& vertexBuffer)
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glBindVertexArray(m_RendererID);
 		vertexBuffer->Bind();
 
@@ -73,6 +83,8 @@ namespace Voyager {
 
 	void OpenGLVertexArray::SetIndexBuffer(const Ref<IndexBuffer>& indexBuffer)
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glBindVertexArray(m_RendererID);
 		indexBuffer->Bind();
 

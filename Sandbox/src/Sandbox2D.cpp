@@ -13,12 +13,14 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
+	VGR_PROFILE_FUNCTION();
+
 	m_CheckerboardTexture = Voyager::Texture2D::Create("assets/textures/Checkerboard.png");
 }
 
 void Sandbox2D::OnDetach()
 {
-
+	VGR_PROFILE_FUNCTION();
 }
 
 void Sandbox2D::OnUpdate(Voyager::Timestep ts)
@@ -26,10 +28,7 @@ void Sandbox2D::OnUpdate(Voyager::Timestep ts)
 	VGR_PROFILE_FUNCTION();
 
 	// Update
-	{
-		VGR_PROFILE_SCOPE("CameraController::OnUpdate");
-		m_CameraController.OnUpdate(ts);
-	}
+	m_CameraController.OnUpdate(ts);
 
 	// Render
 	{

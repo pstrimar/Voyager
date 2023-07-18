@@ -23,16 +23,22 @@ namespace Voyager {
 
 	Voyager::WindowsWindow::WindowsWindow(const WindowProps& props)
 	{
+		VGR_PROFILE_FUNCTION();
+
 		Init(props);
 	}
 
 	Voyager::WindowsWindow::~WindowsWindow()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		Shutdown();
 	}
 
 	void WindowsWindow::Init(const WindowProps& props)
 	{
+		VGR_PROFILE_FUNCTION();
+
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
@@ -41,6 +47,7 @@ namespace Voyager {
 
 		if (!s_GLFWInitialized)
 		{
+			VGR_PROFILE_SCOPE("glfwInit");
 			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
 			VGR_CORE_ASSERT(success, "Could not initialize GLFW!");
@@ -48,7 +55,10 @@ namespace Voyager {
 			s_GLFWInitialized = true;
 		}
 
-		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+		{
+			VGR_PROFILE_SCOPE("glfwCreateWindow");
+			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+		}
 
 		m_Context = new OpenGLContext(m_Window);
 		m_Context->Init();
@@ -149,17 +159,23 @@ namespace Voyager {
 
 	void WindowsWindow::Shutdown()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glfwDestroyWindow(m_Window);
 	}
 
 	void Voyager::WindowsWindow::OnUpdate()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glfwPollEvents();
 		m_Context->SwapBuffers();
 	}
 
 	void Voyager::WindowsWindow::SetVSync(bool enabled)
 	{
+		VGR_PROFILE_FUNCTION();
+
 		if (enabled)
 			glfwSwapInterval(1);
 		else

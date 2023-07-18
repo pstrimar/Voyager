@@ -14,6 +14,8 @@ namespace Voyager {
 
 	void OpenGLContext::Init()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		VGR_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -34,6 +36,8 @@ namespace Voyager {
 
 	void OpenGLContext::SwapBuffers()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		glfwSwapBuffers(m_WindowHandle);
 	}
 

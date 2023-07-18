@@ -10,6 +10,8 @@ namespace Voyager {
 
 	void Renderer::Init()
 	{
+		VGR_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}
