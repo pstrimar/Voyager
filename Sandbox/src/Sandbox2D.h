@@ -20,6 +20,8 @@ private:
 	// Temp
 	Voyager::Ref<Voyager::VertexArray> m_SquareVA;
 	Voyager::Ref<Voyager::Shader> m_FlatColorShader;
+
+	Voyager::Ref<Voyager::Texture2D> m_CheckerboardTexture;
 	
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 };
