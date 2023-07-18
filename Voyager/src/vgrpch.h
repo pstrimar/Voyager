@@ -14,6 +14,8 @@
 
 #include "Voyager/Core/Log.h"
 
+#include "Voyager/Debug/Instrumentor.h"
+
 #ifdef VGR_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
