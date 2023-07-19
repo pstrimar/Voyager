@@ -24,8 +24,7 @@ public:
 			 0.0f,  0.5f, 0.0f,	0.8f, 0.8f, 0.2f, 1.0f,
 		};
 
-		Voyager::Ref<Voyager::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(Voyager::VertexBuffer::Create(vertices, sizeof(vertices)));
+		Voyager::Ref<Voyager::VertexBuffer> vertexBuffer = Voyager::VertexBuffer::Create(vertices, sizeof(vertices));
 
 		Voyager::BufferLayout layout = {
 			{ Voyager::ShaderDataType::Float3, "a_Position" },
@@ -36,8 +35,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		Voyager::Ref<Voyager::IndexBuffer> indexBuffer;
-		indexBuffer.reset(Voyager::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		Voyager::Ref<Voyager::IndexBuffer> indexBuffer = Voyager::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA = Voyager::VertexArray::Create();
@@ -49,8 +47,7 @@ public:
 			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		Voyager::Ref<Voyager::VertexBuffer> squareVB;
-		squareVB.reset(Voyager::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		Voyager::Ref<Voyager::VertexBuffer> squareVB = Voyager::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 
 		squareVB->SetLayout({
 			{ Voyager::ShaderDataType::Float3, "a_Position" },
@@ -60,8 +57,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		Voyager::Ref<Voyager::IndexBuffer> squareIB;
-		squareIB.reset(Voyager::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		Voyager::Ref<Voyager::IndexBuffer> squareIB = Voyager::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string vertexSrc = R"(

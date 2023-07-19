@@ -9,7 +9,7 @@ namespace Voyager {
 	{
 		switch (type)
 		{
-		case ShaderDataType::None: return GL_FLOAT;
+		case ShaderDataType::Float: return GL_FLOAT;
 		case ShaderDataType::Float2: return GL_FLOAT;
 		case ShaderDataType::Float3: return GL_FLOAT;
 		case ShaderDataType::Float4: return GL_FLOAT;
