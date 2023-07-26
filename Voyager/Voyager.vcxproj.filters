@@ -1416,6 +1416,8 @@
     <ClInclude Include="src\Voyager\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Voyager\Debug\Instrumentor.h" />
     <ClInclude Include="src\Voyager\Renderer\SubTexture2D.h" />
+    <ClInclude Include="src\Voyager\Renderer\Framebuffer.h" />
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1498,5 +1500,7 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Voyager\Renderer\SubTexture2D.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\Framebuffer.cpp" />
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.cpp" />
   </ItemGroup>
 </Project>
