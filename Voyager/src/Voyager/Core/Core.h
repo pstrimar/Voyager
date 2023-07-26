@@ -60,9 +60,18 @@
 #endif // End of DLL support
 
 #ifdef VGR_DEBUG
+	#if defined(VGR_PLATFORM_WINDOWS)
+		#define VGR_DEBUGBREAK() __debugbreak()
+	#elif defined(VGR_PLATFORM_LINUX)
+		#include <signal.h>
+		#define VGR_DEBUGBREAK() raise(SIGTRAP)
+	#else
+		#error "Platform doesn't support debugbreak yet!"
+	#endif
 	#define VGR_ENABLE_ASSERTS
 #endif
 
+// TODO: Make this macro able to take in no arguments except condition
 #ifdef  VGR_ENABLE_ASSERTS
 	#define VGR_ASSERT(x, ...) { if(!(x)) { VGR_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define VGR_CORE_ASSERT(x, ...) { if(!(x)) { VGR_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
