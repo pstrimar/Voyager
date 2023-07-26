@@ -18,6 +18,7 @@ IncludeDir["Glad"] = "Voyager/vendor/Glad/include"
 IncludeDir["ImGui"] = "Voyager/vendor/imgui"
 IncludeDir["glm"] = "Voyager/vendor/glm"
 IncludeDir["stb_image"] = "Voyager/vendor/stb_image"
+IncludeDir["entt"] = "Voyager/vendor/entt/include"
 
 include "Voyager/vendor/GLFW"
 include "Voyager/vendor/Glad"
@@ -59,7 +60,8 @@ project "Voyager"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -116,7 +118,8 @@ project "Sandbox"
 		"Voyager/vendor/spdlog/include",
 		"Voyager/src",
 		"%{IncludeDir.glm}",
-		"Voyager/vendor"
+		"Voyager/vendor",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -164,7 +167,8 @@ project "Voyager-Editor"
 		"Voyager/vendor/spdlog/include",
 		"Voyager/src",
 		"%{IncludeDir.glm}",
-		"Voyager/vendor"
+		"Voyager/vendor",
+		"%{IncludeDir.entt}"
 	}
 
 	links

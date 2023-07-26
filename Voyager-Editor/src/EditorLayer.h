@@ -22,7 +22,10 @@ namespace Voyager {
 		// Temp
 		Ref<VertexArray> m_SquareVA;
 		Ref<Shader> m_FlatColorShader;
-		Ref<Framebuffer> m_Framebuffer;;
+		Ref<Framebuffer> m_Framebuffer;
+
+		Ref<Scene> m_ActiveScene;
+		entt::entity m_SquareEntity;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 
