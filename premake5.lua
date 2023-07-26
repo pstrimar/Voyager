@@ -1,6 +1,6 @@
 workspace "Voyager"
 	architecture "x64"
-	startproject "Sandbox"
+	startproject "Voyager-Editor"
 
 	configurations
 	{
@@ -97,6 +97,54 @@ project "Voyager"
 
 project "Sandbox"
 	location "Sandbox"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"Voyager/vendor/spdlog/include",
+		"Voyager/src",
+		"%{IncludeDir.glm}",
+		"Voyager/vendor"
+	}
+
+	links
+	{
+		"Voyager"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+	filter "configurations:Debug"
+		defines "VGR_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "VGR_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "VGR_DIST"
+		runtime "Release"
+		optimize "on"
+
+
+project "Voyager-Editor"
+	location "Voyager-Editor"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"

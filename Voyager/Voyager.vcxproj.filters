@@ -10,6 +10,9 @@
     <Filter Include="src\Voyager\Core">
       <UniqueIdentifier>{71A57837-5D9E-9789-86D0-7C0E72287795}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Voyager\Debug">
+      <UniqueIdentifier>{AFAE9926-1BC5-97BC-643C-23DED0916844}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Voyager\Events">
       <UniqueIdentifier>{3DD759FD-29BB-1A53-921B-15A67E1E05D5}</UniqueIdentifier>
     </Filter>
@@ -90,6 +93,9 @@
     <ClInclude Include="src\Voyager\Core\Window.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Debug\Instrumentor.h">
+      <Filter>src\Voyager\Debug</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Events\ApplicationEvent.h">
       <Filter>src\Voyager\Events</Filter>
     </ClInclude>
@@ -109,6 +115,9 @@
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Voyager\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h">
@@ -132,6 +141,9 @@
     <ClInclude Include="src\Voyager\Renderer\Buffer.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\Framebuffer.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
@@ -147,10 +159,16 @@
     <ClInclude Include="src\Voyager\Renderer\Renderer.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\Renderer2D.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\RendererAPI.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Shader.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\SubTexture2D.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Texture.h">
@@ -1413,11 +1431,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\Voyager\Debug\Instrumentor.h" />
-    <ClInclude Include="src\Voyager\Renderer\SubTexture2D.h" />
-    <ClInclude Include="src\Voyager\Renderer\Framebuffer.h" />
-    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1430,6 +1443,9 @@
       <Filter>src\Voyager\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Core\Log.cpp">
+      <Filter>src\Voyager\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Core\Window.cpp">
       <Filter>src\Voyager\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp">
@@ -1445,6 +1461,9 @@
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Voyager\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp">
@@ -1468,6 +1487,9 @@
     <ClCompile Include="src\Voyager\Renderer\Buffer.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\Framebuffer.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
@@ -1480,10 +1502,16 @@
     <ClCompile Include="src\Voyager\Renderer\Renderer.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\Renderer2D.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\RendererAPI.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Shader.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\SubTexture2D.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Texture.cpp">
@@ -1498,9 +1526,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Voyager\Renderer\Renderer2D.cpp" />
-    <ClCompile Include="src\Voyager\Renderer\SubTexture2D.cpp" />
-    <ClCompile Include="src\Voyager\Renderer\Framebuffer.cpp" />
-    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.cpp" />
   </ItemGroup>
 </Project>

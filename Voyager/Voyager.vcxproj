@@ -607,6 +607,7 @@
     <ClCompile Include="src\Voyager\Core\Layer.cpp" />
     <ClCompile Include="src\Voyager\Core\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Core\Log.cpp" />
+    <ClCompile Include="src\Voyager\Core\Window.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />

@@ -20,7 +20,6 @@ private:
 	// Temp
 	Voyager::Ref<Voyager::VertexArray> m_SquareVA;
 	Voyager::Ref<Voyager::Shader> m_FlatColorShader;
-	Voyager::Ref<Voyager::Framebuffer> m_Framebuffer;;
 
 	Voyager::Ref<Voyager::Texture2D> m_CheckerboardTexture;
 	
