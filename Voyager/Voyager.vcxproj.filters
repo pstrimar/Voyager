@@ -132,9 +132,6 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h">
-      <Filter>src\Voyager\Platform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h">
       <Filter>src\Voyager\Platform\Windows</Filter>
     </ClInclude>

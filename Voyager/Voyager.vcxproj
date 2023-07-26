@@ -168,7 +168,6 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLTexture.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Voyager\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
     <ClInclude Include="src\Voyager\Renderer\Framebuffer.h" />
