@@ -69,6 +69,11 @@ namespace Voyager {
 		layer->OnAttach();
 	}
 
+	void Application::Close()
+	{
+		m_Running = false;
+	}
+
 	void Application::Run()
 	{
 		VGR_PROFILE_FUNCTION();
