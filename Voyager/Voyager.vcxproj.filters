@@ -1433,6 +1433,7 @@
     <ClInclude Include="src\Voyager\Scene\Entity.h" />
     <ClInclude Include="src\Voyager\Renderer\Camera.h" />
     <ClInclude Include="src\Voyager\Scene\SceneCamera.h" />
+    <ClInclude Include="src\Voyager\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
