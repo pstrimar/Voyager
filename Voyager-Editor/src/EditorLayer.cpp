@@ -25,8 +25,11 @@ namespace Voyager {
         m_ActiveScene = CreateRef<Scene>();
 
         // Entity
-        auto square = m_ActiveScene->CreateEntity("Square");
+        auto square = m_ActiveScene->CreateEntity("Green Square");
         square.AddComponent<SpriteRendererComponent>(glm::vec4{0.0f, 1.0f, 0.0f, 1.0f});
+
+        auto redSquare = m_ActiveScene->CreateEntity("Red Square");
+        redSquare.AddComponent<SpriteRendererComponent>(glm::vec4{1.0f, 0.0f, 0.0f, 1.0f});
 
         m_SquareEntity = square;
 
@@ -53,19 +56,21 @@ namespace Voyager {
                 auto& transform = GetComponent<TransformComponent>().Transform;
                 float speed = 5.0f;
 
-                if (Input::IsKeyPressed(VGR_KEY_A))
+                if (Input::IsKeyPressed(Key::A))
                     transform[3][0] -= speed * ts;
-                if (Input::IsKeyPressed(VGR_KEY_D))
+                if (Input::IsKeyPressed(Key::D))
                     transform[3][0] += speed * ts;
-                if (Input::IsKeyPressed(VGR_KEY_W))
+                if (Input::IsKeyPressed(Key::W))
                     transform[3][1] += speed * ts;
-                if (Input::IsKeyPressed(VGR_KEY_S))
+                if (Input::IsKeyPressed(Key::S))
                     transform[3][1] -= speed * ts;
             }
         };
 
         m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
         m_SecondCamera.AddComponent<NativeScriptComponent>().Bind<CameraController>();
+
+        m_SceneHierarchyPanel.SetContext(m_ActiveScene);
     }
 
     void EditorLayer::OnDetach()
@@ -170,6 +175,8 @@ namespace Voyager {
 
             ImGui::EndMenuBar();
         }
+
+        m_SceneHierarchyPanel.OnImGuiRender();
 
         ImGui::Begin("Settings");
 
