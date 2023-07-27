@@ -170,6 +170,7 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
+    <ClInclude Include="src\Voyager\Renderer\Camera.h" />
     <ClInclude Include="src\Voyager\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h" />
@@ -186,6 +187,7 @@
     <ClInclude Include="src\Voyager\Scene\Components.h" />
     <ClInclude Include="src\Voyager\Scene\Entity.h" />
     <ClInclude Include="src\Voyager\Scene\Scene.h" />
+    <ClInclude Include="src\Voyager\Scene\SceneCamera.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -639,6 +641,7 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Scene\Entity.cpp" />
     <ClCompile Include="src\Voyager\Scene\Scene.cpp" />
+    <ClCompile Include="src\Voyager\Scene\SceneCamera.cpp" />
     <ClCompile Include="vendor\stb_image\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>

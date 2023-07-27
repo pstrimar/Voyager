@@ -1431,6 +1431,8 @@
     <ClInclude Include="src\Voyager\Scene\Scene.h" />
     <ClInclude Include="src\Voyager\Scene\Components.h" />
     <ClInclude Include="src\Voyager\Scene\Entity.h" />
+    <ClInclude Include="src\Voyager\Renderer\Camera.h" />
+    <ClInclude Include="src\Voyager\Scene\SceneCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1528,5 +1530,6 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Scene\Scene.cpp" />
     <ClCompile Include="src\Voyager\Scene\Entity.cpp" />
+    <ClCompile Include="src\Voyager\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>
