@@ -15,6 +15,7 @@
 #include "Voyager/ImGui/ImGuiLayer.h"
 
 #include "Voyager/Scene/Scene.h"
+#include "Voyager/Scene/Entity.h"
 #include "Voyager/Scene/Components.h"
 
 // ---Renderer-------------------------
