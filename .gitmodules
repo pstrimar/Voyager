@@ -10,3 +10,6 @@
 [submodule "Voyager/vendor/imgui"]
 	path = Voyager/vendor/imgui
 	url = https://github.com/pstrimar/imgui
+[submodule "Voyager/vendor/yaml-cpp"]
+	path = Voyager/vendor/yaml-cpp
+	url = https://github.com/pstrimar/yaml-cpp

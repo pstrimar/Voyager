@@ -19,10 +19,14 @@ IncludeDir["ImGui"] = "Voyager/vendor/imgui"
 IncludeDir["glm"] = "Voyager/vendor/glm"
 IncludeDir["stb_image"] = "Voyager/vendor/stb_image"
 IncludeDir["entt"] = "Voyager/vendor/entt/include"
+IncludeDir["yaml_cpp"] = "Voyager/vendor/yaml-cpp/include"
 
-include "Voyager/vendor/GLFW"
-include "Voyager/vendor/Glad"
-include "Voyager/vendor/ImGui"
+group "Dependencies"
+	include "Voyager/vendor/GLFW"
+	include "Voyager/vendor/Glad"
+	include "Voyager/vendor/ImGui"
+	include "Voyager/vendor/yaml-cpp"
+group ""
 
 project "Voyager"
 	location "Voyager"
@@ -61,7 +65,8 @@ project "Voyager"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
 	}
 
 	links
@@ -69,6 +74,7 @@ project "Voyager"
 		"GLFW",
 		"Glad",
 		"ImGui",
+		"yaml-cpp",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}

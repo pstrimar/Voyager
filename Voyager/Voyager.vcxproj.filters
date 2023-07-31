@@ -31,6 +31,9 @@
     <Filter Include="src\Voyager\Renderer">
       <UniqueIdentifier>{3FA927B2-2B38-B17B-D456-C576C0C4C121}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Voyager\Scene">
+      <UniqueIdentifier>{5611A827-C227-A6BD-0B9F-31DF77F47645}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -138,6 +141,9 @@
     <ClInclude Include="src\Voyager\Renderer\Buffer.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\Camera.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Framebuffer.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
@@ -173,6 +179,24 @@
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h">
       <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\Components.h">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\Entity.h">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\Scene.h">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\SceneCamera.h">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\SceneSerializer.h">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Scene\ScriptableEntity.h">
+      <Filter>src\Voyager\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\vgrpch.h">
       <Filter>src</Filter>
@@ -1428,12 +1452,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Scene\Scene.h" />
-    <ClInclude Include="src\Voyager\Scene\Components.h" />
-    <ClInclude Include="src\Voyager\Scene\Entity.h" />
-    <ClInclude Include="src\Voyager\Renderer\Camera.h" />
-    <ClInclude Include="src\Voyager\Scene\SceneCamera.h" />
-    <ClInclude Include="src\Voyager\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1523,14 +1541,23 @@
     <ClCompile Include="src\Voyager\Renderer\VertexArray.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Scene\Entity.cpp">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Scene\Scene.cpp">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Scene\SceneCamera.cpp">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Scene\SceneSerializer.cpp">
+      <Filter>src\Voyager\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\vgrpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Voyager\Scene\Scene.cpp" />
-    <ClCompile Include="src\Voyager\Scene\Entity.cpp" />
-    <ClCompile Include="src\Voyager\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>
