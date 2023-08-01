@@ -20,6 +20,7 @@ IncludeDir["glm"] = "Voyager/vendor/glm"
 IncludeDir["stb_image"] = "Voyager/vendor/stb_image"
 IncludeDir["entt"] = "Voyager/vendor/entt/include"
 IncludeDir["yaml_cpp"] = "Voyager/vendor/yaml-cpp/include"
+IncludeDir["ImGuizmo"] = "Voyager/vendor/ImGuizmo"
 
 group "Dependencies"
 	include "Voyager/vendor/GLFW"
@@ -49,6 +50,8 @@ project "Voyager"
 		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
+		"%{prj.name}/vendor/ImGuizmo/ImGuizmo.h",
+		"%{prj.name}/vendor/ImGuizmo/ImGuizmo.cpp"
 	}
 
 	defines
@@ -67,7 +70,8 @@ project "Voyager"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
-		"%{IncludeDir.yaml_cpp}"
+		"%{IncludeDir.yaml_cpp}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links
@@ -79,6 +83,9 @@ project "Voyager"
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
+
+	filter "files:Voyager/vendor/ImGuizmo/**.cpp"
+	flags { "NoPCH" }
 
 	filter "system:windows"
 		systemversion "latest"
@@ -175,7 +182,8 @@ project "Voyager-Editor"
 		"Voyager/src",
 		"%{IncludeDir.glm}",
 		"Voyager/vendor",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links

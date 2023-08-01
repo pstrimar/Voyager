@@ -34,8 +34,14 @@
     <Filter Include="src\Voyager\Scene">
       <UniqueIdentifier>{5611A827-C227-A6BD-0B9F-31DF77F47645}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Voyager\Utils">
+      <UniqueIdentifier>{99A5D527-05BC-D3BD-4E33-5FDFBA88A445}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\ImGuizmo">
+      <UniqueIdentifier>{73BF7F4C-DF4A-ED10-E85B-700554664911}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
@@ -57,6 +63,9 @@
     </Filter>
     <Filter Include="vendor\stb_image">
       <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Voyager\Math">
+      <UniqueIdentifier>{7e9dd412-082a-4abc-b30a-d95dce615302}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -198,8 +207,14 @@
     <ClInclude Include="src\Voyager\Scene\ScriptableEntity.h">
       <Filter>src\Voyager\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Utils\PlatformUtils.h">
+      <Filter>src\Voyager\Utils</Filter>
+    </ClInclude>
     <ClInclude Include="src\vgrpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -1452,7 +1467,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Utils\PlatformUtils.h" />
+    <ClInclude Include="src\Voyager\Math\Math.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1499,6 +1514,9 @@
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Platform\Windows\WindowPlatformUtils.cpp">
+      <Filter>src\Voyager\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Voyager\Platform\Windows</Filter>
@@ -1557,9 +1575,12 @@
     <ClCompile Include="src\vgrpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <Filter>vendor\ImGuizmo</Filter>
+    </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Voyager\Platform\Windows\WindowPlatformUtils.cpp" />
+    <ClCompile Include="src\Voyager\Math\Math.cpp" />
   </ItemGroup>
 </Project>

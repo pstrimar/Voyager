@@ -13,3 +13,6 @@
 [submodule "Voyager/vendor/yaml-cpp"]
 	path = Voyager/vendor/yaml-cpp
 	url = https://github.com/pstrimar/yaml-cpp
+[submodule "Voyager/vendor/ImGuizmo"]
+	path = Voyager/vendor/ImGuizmo
+	url = https://github.com/pstrimar/ImGuizmo

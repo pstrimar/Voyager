@@ -77,7 +77,7 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -98,7 +98,7 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -123,7 +123,7 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -161,6 +161,7 @@
     <ClInclude Include="src\Voyager\Events\KeyEvent.h" />
     <ClInclude Include="src\Voyager\Events\MouseEvent.h" />
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Voyager\Math\Math.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.h" />
@@ -189,8 +190,9 @@
     <ClInclude Include="src\Voyager\Scene\SceneCamera.h" />
     <ClInclude Include="src\Voyager\Scene\SceneSerializer.h" />
     <ClInclude Include="src\Voyager\Scene\ScriptableEntity.h" />
-    <ClInclude Include="src\vgrpch.h" />
     <ClInclude Include="src\Voyager\Utils\PlatformUtils.h" />
+    <ClInclude Include="src\vgrpch.h" />
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -618,6 +620,7 @@
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp" />
+    <ClCompile Include="src\Voyager\Math\Math.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLFramebuffer.cpp" />
@@ -646,6 +649,9 @@
     <ClCompile Include="src\Voyager\Scene\SceneSerializer.cpp" />
     <ClCompile Include="src\vgrpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp" />
   </ItemGroup>
