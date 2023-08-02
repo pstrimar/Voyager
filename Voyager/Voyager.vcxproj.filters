@@ -96,9 +96,6 @@
     <ClInclude Include="src\Voyager\Core\Log.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Core\MouseButtonCodes.h">
-      <Filter>src\Voyager\Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\Voyager\Core\Timestep.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
@@ -1468,6 +1465,8 @@
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Math\Math.h" />
+    <ClInclude Include="src\Voyager\Renderer\EditorCamera.h" />
+    <ClInclude Include="src\Voyager\Core\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1582,5 +1581,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Math\Math.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\EditorCamera.cpp" />
   </ItemGroup>
 </Project>

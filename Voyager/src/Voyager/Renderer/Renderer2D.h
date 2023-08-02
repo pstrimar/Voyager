@@ -4,6 +4,7 @@
 #include "Texture.h"
 #include "SubTexture2D.h"
 #include "Camera.h"
+#include "EditorCamera.h"
 
 namespace Voyager {
 
@@ -14,6 +15,7 @@ namespace Voyager {
 		static void Shutdown();
 
 		static void BeginScene(const Camera& camera, const glm::mat4& transform);
+		static void BeginScene(const EditorCamera& camera); // TODO: remove
 		static void BeginScene(const OrthographicCamera& camera); // TODO: remove
 		static void EndScene();
 		static void Flush();

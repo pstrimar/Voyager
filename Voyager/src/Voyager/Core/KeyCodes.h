@@ -1,7 +1,7 @@
 #pragma once
 
-namespace Voyager
-{
+namespace Voyager {
+
 	using KeyCode = uint16_t;
 
 	namespace Key

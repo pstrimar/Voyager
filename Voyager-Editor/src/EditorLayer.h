@@ -3,6 +3,7 @@
 #include "Voyager.h"
 
 #include "Panels/SceneHierarchyPanel.h"
+#include "Voyager/Renderer/EditorCamera.h"
 
 namespace Voyager {
 
@@ -37,6 +38,8 @@ namespace Voyager {
 		Entity m_SecondCamera;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 

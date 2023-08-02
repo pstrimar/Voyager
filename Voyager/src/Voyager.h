@@ -9,7 +9,7 @@
 
 #include "Voyager/Core/Input.h"
 #include "Voyager/Core/KeyCodes.h"
-#include "Voyager/Core/MouseButtonCodes.h"
+#include "Voyager/Core/MouseCodes.h"
 #include "Voyager/Renderer/OrthographicCameraController.h"
 
 #include "Voyager/ImGui/ImGuiLayer.h"

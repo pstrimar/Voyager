@@ -152,7 +152,7 @@
     <ClInclude Include="src\Voyager\Core\Layer.h" />
     <ClInclude Include="src\Voyager\Core\LayerStack.h" />
     <ClInclude Include="src\Voyager\Core\Log.h" />
-    <ClInclude Include="src\Voyager\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\Voyager\Core\MouseCodes.h" />
     <ClInclude Include="src\Voyager\Core\Timestep.h" />
     <ClInclude Include="src\Voyager\Core\Window.h" />
     <ClInclude Include="src\Voyager\Debug\Instrumentor.h" />
@@ -172,6 +172,7 @@
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
     <ClInclude Include="src\Voyager\Renderer\Camera.h" />
+    <ClInclude Include="src\Voyager\Renderer\EditorCamera.h" />
     <ClInclude Include="src\Voyager\Renderer\Framebuffer.h" />
     <ClInclude Include="src\Voyager\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Voyager\Renderer\OrthographicCamera.h" />
@@ -632,6 +633,7 @@
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\EditorCamera.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Framebuffer.cpp" />
     <ClCompile Include="src\Voyager\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Voyager\Renderer\OrthographicCameraController.cpp" />
