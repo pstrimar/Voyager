@@ -286,7 +286,7 @@ namespace Voyager {
 
 		// center align Add Component button
 		ImGuiStyle& style = ImGui::GetStyle();
-
+		ImGui::Separator();
 		const char* addCompLabel = "Add Component";
 		float extraWidth = 60.0f;
 		float size = ImGui::CalcTextSize(addCompLabel).x + style.FramePadding.x * 2.0f + extraWidth;
