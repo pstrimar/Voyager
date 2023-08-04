@@ -318,7 +318,9 @@ namespace Voyager {
 
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<KeyPressedEvent>(VGR_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
+        dispatcher.Dispatch<MouseButtonPressedEvent>(VGR_BIND_EVENT_FN(EditorLayer::OnMouseButtonPressed));
     }
+
     bool EditorLayer::OnKeyPressed(KeyPressedEvent e)
     {
         if (e.GetRepeatCount() > 0)
@@ -363,6 +365,16 @@ namespace Voyager {
             case Key::R:
                 m_GizmoType = ImGuizmo::OPERATION::SCALE;
                 break;
+        }
+        return false;
+    }
+
+    bool EditorLayer::OnMouseButtonPressed(MouseButtonPressedEvent e)
+    {
+        if (e.GetMouseButton() == Mouse::ButtonLeft)
+        {
+            if (m_ViewportHovered && !ImGuizmo::IsOver() && !Input::IsKeyPressed(Key::LeftAlt))
+                m_SceneHierarchyPanel.SetSelectedEntity(m_HoveredEntity);
         }
         return false;
     }
