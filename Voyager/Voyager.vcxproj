@@ -77,10 +77,10 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\ImGui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;C:\VulkanSDK\1.3.250.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -89,7 +89,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>opengl32.lib;dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;dwmapi.lib;vendor\VulkanSDK\Lib\shaderc_sharedd.lib;vendor\VulkanSDK\Lib\spirv-cross-cored.lib;vendor\VulkanSDK\Lib\spirv-cross-glsld.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -98,13 +98,13 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\ImGui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;C:\VulkanSDK\1.3.250.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -114,7 +114,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>opengl32.lib;dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;dwmapi.lib;C:\VulkanSDK\1.3.250.1\Lib\shaderc_shared.lib;C:\VulkanSDK\1.3.250.1\Lib\spirv-cross-core.lib;C:\VulkanSDK\1.3.250.1\Lib\spirv-cross-glsl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -123,13 +123,13 @@
       <PrecompiledHeaderFile>vgrpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;YAML_CPP_STATIC_DEFINE;VGR_BUILD_DLL;GLFW_INCLUDE_NONE;VGR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\ImGui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;vendor\ImGuizmo;C:\VulkanSDK\1.3.250.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -139,7 +139,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalDependencies>opengl32.lib;dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;dwmapi.lib;C:\VulkanSDK\1.3.250.1\Lib\shaderc_shared.lib;C:\VulkanSDK\1.3.250.1\Lib\spirv-cross-core.lib;C:\VulkanSDK\1.3.250.1\Lib\spirv-cross-glsl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -153,6 +153,7 @@
     <ClInclude Include="src\Voyager\Core\LayerStack.h" />
     <ClInclude Include="src\Voyager\Core\Log.h" />
     <ClInclude Include="src\Voyager\Core\MouseCodes.h" />
+    <ClInclude Include="src\Voyager\Core\Timer.h" />
     <ClInclude Include="src\Voyager\Core\Timestep.h" />
     <ClInclude Include="src\Voyager\Core\Window.h" />
     <ClInclude Include="src\Voyager\Debug\Instrumentor.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLTexture.h" />
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLUniformBuffer.h" />
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Voyager\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Voyager\Renderer\Buffer.h" />
@@ -184,6 +186,7 @@
     <ClInclude Include="src\Voyager\Renderer\Shader.h" />
     <ClInclude Include="src\Voyager\Renderer\SubTexture2D.h" />
     <ClInclude Include="src\Voyager\Renderer\Texture.h" />
+    <ClInclude Include="src\Voyager\Renderer\UniformBuffer.h" />
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h" />
     <ClInclude Include="src\Voyager\Scene\Components.h" />
     <ClInclude Include="src\Voyager\Scene\Entity.h" />
@@ -628,6 +631,7 @@
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLTexture.cpp" />
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLUniformBuffer.cpp" />
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowPlatformUtils.cpp" />
     <ClCompile Include="src\Voyager\Platform\Windows\WindowsInput.cpp" />
@@ -644,6 +648,7 @@
     <ClCompile Include="src\Voyager\Renderer\Shader.cpp" />
     <ClCompile Include="src\Voyager\Renderer\SubTexture2D.cpp" />
     <ClCompile Include="src\Voyager\Renderer\Texture.cpp" />
+    <ClCompile Include="src\Voyager\Renderer\UniformBuffer.cpp" />
     <ClCompile Include="src\Voyager\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Voyager\Scene\Entity.cpp" />
     <ClCompile Include="src\Voyager\Scene\Scene.cpp" />

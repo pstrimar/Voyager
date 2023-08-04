@@ -399,3 +399,15 @@ FodyWeavers.xsd
 
 bin/
 bin-int/
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+# Directories
+Voyager/vendor/VulkanSDK
+Voyager-Editor/assets/cache
+scripts/__pycache__

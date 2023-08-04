@@ -1,3 +1,5 @@
+include "Dependencies.lua"
+
 workspace "Voyager"
 	architecture "x64"
 	startproject "Voyager-Editor"
@@ -11,17 +13,6 @@ workspace "Voyager"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Include directories relative to root folder (solution directory)
-IncludeDir = {}
-IncludeDir["GLFW"] = "Voyager/vendor/GLFW/include"
-IncludeDir["Glad"] = "Voyager/vendor/Glad/include"
-IncludeDir["ImGui"] = "Voyager/vendor/imgui"
-IncludeDir["glm"] = "Voyager/vendor/glm"
-IncludeDir["stb_image"] = "Voyager/vendor/stb_image"
-IncludeDir["entt"] = "Voyager/vendor/entt/include"
-IncludeDir["yaml_cpp"] = "Voyager/vendor/yaml-cpp/include"
-IncludeDir["ImGuizmo"] = "Voyager/vendor/ImGuizmo"
-
 group "Dependencies"
 	include "Voyager/vendor/GLFW"
 	include "Voyager/vendor/Glad"
@@ -34,7 +25,7 @@ project "Voyager"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -71,7 +62,8 @@ project "Voyager"
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
 		"%{IncludeDir.yaml_cpp}",
-		"%{IncludeDir.ImGuizmo}"
+		"%{IncludeDir.ImGuizmo}",
+		"%{IncludeDir.VulkanSDK}"
 	}
 
 	links
@@ -101,25 +93,46 @@ project "Voyager"
 		runtime "Debug"
 		symbols "on"
 
+		links
+		{
+			"%{Library.ShaderC_Debug}",
+			"%{Library.SPIRV_Cross_Debug}",
+			"%{Library.SPIRV_Cross_GLSL_Debug}"
+		}
+
 	filter "configurations:Release"
 		defines "VGR_RELEASE"
 		runtime "Release"
 		optimize "on"
+
+		links
+		{
+			"%{Library.ShaderC_Release}",
+			"%{Library.SPIRV_Cross_Release}",
+			"%{Library.SPIRV_Cross_GLSL_Release}"
+		}
 
 	filter "configurations:Dist"
 		defines "VGR_DIST"
 		runtime "Release"
 		optimize "on"
 
+		links
+		{
+			"%{Library.ShaderC_Release}",
+			"%{Library.SPIRV_Cross_Release}",
+			"%{Library.SPIRV_Cross_GLSL_Release}"
+		}
+
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
@@ -133,7 +146,8 @@ project "Sandbox"
 		"Voyager/src",
 		"%{IncludeDir.glm}",
 		"Voyager/vendor",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links
@@ -165,7 +179,7 @@ project "Voyager-Editor"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")

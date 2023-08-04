@@ -8,8 +8,8 @@ namespace Voyager {
 	class VoyagerEditor : public Application
 	{
 	public:
-		VoyagerEditor()
-			: Application("Voyager Editor")
+		VoyagerEditor(ApplicationCommandLineArgs args)
+			: Application("Voyager Editor", args)
 		{
 			PushLayer(new EditorLayer());
 		}
@@ -19,8 +19,8 @@ namespace Voyager {
 		}
 	};
 
-	Application* CreateApplication()
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new VoyagerEditor();
+		return new VoyagerEditor(args);
 	}
 }

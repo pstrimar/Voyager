@@ -55,6 +55,7 @@ namespace Voyager {
 		static Statistics GetStats();
 		static void ResetStats();
 	private:
-		static void FlushAndReset();
+		static void StartBatch();
+		static void NextBatch();
 	};
 }

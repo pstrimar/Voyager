@@ -19,6 +19,9 @@
     <Filter Include="src\Voyager\ImGui">
       <UniqueIdentifier>{6319F826-CF2F-F6BC-18A7-81DE84FCC644}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Voyager\Math">
+      <UniqueIdentifier>{F2E57D37-DEDE-9C89-0711-820EF3687C95}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Voyager\Platform">
       <UniqueIdentifier>{EDA14AD7-D930-D4A0-824F-E89B6EBDE446}</UniqueIdentifier>
     </Filter>
@@ -64,9 +67,6 @@
     <Filter Include="vendor\stb_image">
       <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Voyager\Math">
-      <UniqueIdentifier>{7e9dd412-082a-4abc-b30a-d95dce615302}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Voyager.h">
@@ -96,6 +96,12 @@
     <ClInclude Include="src\Voyager\Core\Log.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Core\MouseCodes.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Core\Timer.h">
+      <Filter>src\Voyager\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Core\Timestep.h">
       <Filter>src\Voyager\Core</Filter>
     </ClInclude>
@@ -120,6 +126,9 @@
     <ClInclude Include="src\Voyager\ImGui\ImGuiLayer.h">
       <Filter>src\Voyager\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Math\Math.h">
+      <Filter>src\Voyager\Math</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
@@ -138,6 +147,9 @@
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLTexture.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLUniformBuffer.h">
+      <Filter>src\Voyager\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClInclude>
@@ -148,6 +160,9 @@
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Camera.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\EditorCamera.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Framebuffer.h">
@@ -181,6 +196,9 @@
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\Texture.h">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Voyager\Renderer\UniformBuffer.h">
       <Filter>src\Voyager\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Voyager\Renderer\VertexArray.h">
@@ -1464,9 +1482,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Voyager\Math\Math.h" />
-    <ClInclude Include="src\Voyager\Renderer\EditorCamera.h" />
-    <ClInclude Include="src\Voyager\Core\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Voyager\Core\Application.cpp">
@@ -1493,6 +1508,9 @@
     <ClCompile Include="src\Voyager\ImGui\ImGuiTables.cpp">
       <Filter>src\Voyager\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Math\Math.cpp">
+      <Filter>src\Voyager\Math</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1511,6 +1529,9 @@
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLUniformBuffer.cpp">
+      <Filter>src\Voyager\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Voyager\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1524,6 +1545,9 @@
       <Filter>src\Voyager\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Buffer.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\EditorCamera.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\Framebuffer.cpp">
@@ -1556,6 +1580,9 @@
     <ClCompile Include="src\Voyager\Renderer\Texture.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Voyager\Renderer\UniformBuffer.cpp">
+      <Filter>src\Voyager\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Voyager\Renderer\VertexArray.cpp">
       <Filter>src\Voyager\Renderer</Filter>
     </ClCompile>
@@ -1580,7 +1607,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Voyager\Math\Math.cpp" />
-    <ClCompile Include="src\Voyager\Renderer\EditorCamera.cpp" />
   </ItemGroup>
 </Project>
