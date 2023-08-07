@@ -3,6 +3,7 @@
 #include "Voyager.h"
 
 #include "Panels/SceneHierarchyPanel.h"
+#include "Panels/ContentBrowserPanel.h"
 #include "Voyager/Renderer/EditorCamera.h"
 
 namespace Voyager {
@@ -25,6 +26,7 @@ namespace Voyager {
 
 		void NewScene();
 		void OpenScene();
+		void OpenScene(const std::filesystem::path& path);
 		void SaveSceneAs();
 	private:
 		OrthographicCameraController m_CameraController;
@@ -55,5 +57,6 @@ namespace Voyager {
 		int m_GizmoType = -1;
 
 		SceneHierarchyPanel m_SceneHierarchyPanel;
+		ContentBrowserPanel m_ContentBrowserPanel;
 	};
 }
