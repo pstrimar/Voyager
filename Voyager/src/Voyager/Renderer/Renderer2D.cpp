@@ -495,13 +495,13 @@ namespace Voyager {
 
 	void Renderer2D::DrawSprite(const glm::mat4& transform, SpriteRendererComponent& src, int entityID)
 	{
-		if (src.Texture)
+		if (src.Texture) 
 			DrawQuad(transform, src.Texture, src.TilingFactor, src.Color, entityID);
 		else
 			DrawQuad(transform, src.Color, entityID);
 	}
 
-	Renderer2D::Statistics Renderer2D::GetStats()
+	Renderer2D::Statistics Renderer2D::GetStats() 
 	{
 		return s_Data.Stats;
 	}

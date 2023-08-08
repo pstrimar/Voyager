@@ -16,3 +16,6 @@
 [submodule "Voyager/vendor/ImGuizmo"]
 	path = Voyager/vendor/ImGuizmo
 	url = https://github.com/pstrimar/ImGuizmo
+[submodule "Voyager/vendor/Box2D"]
+	path = Voyager/vendor/Box2D
+	url = https://github.com/pstrimar/box2d

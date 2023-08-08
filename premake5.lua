@@ -14,6 +14,7 @@ workspace "Voyager"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 group "Dependencies"
+	include "Voyager/vendor/Box2D"
 	include "Voyager/vendor/GLFW"
 	include "Voyager/vendor/Glad"
 	include "Voyager/vendor/ImGui"
@@ -55,6 +56,7 @@ project "Voyager"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.Box2D}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
@@ -68,6 +70,7 @@ project "Voyager"
 
 	links
 	{
+		"Box2D",
 		"GLFW",
 		"Glad",
 		"ImGui",
