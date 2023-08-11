@@ -155,6 +155,7 @@
     <ClInclude Include="src\Voyager\Core\MouseCodes.h" />
     <ClInclude Include="src\Voyager\Core\Timer.h" />
     <ClInclude Include="src\Voyager\Core\Timestep.h" />
+    <ClInclude Include="src\Voyager\Core\UUID.h" />
     <ClInclude Include="src\Voyager\Core\Window.h" />
     <ClInclude Include="src\Voyager\Debug\Instrumentor.h" />
     <ClInclude Include="src\Voyager\Events\ApplicationEvent.h" />
@@ -620,6 +621,7 @@
     <ClCompile Include="src\Voyager\Core\Layer.cpp" />
     <ClCompile Include="src\Voyager\Core\LayerStack.cpp" />
     <ClCompile Include="src\Voyager\Core\Log.cpp" />
+    <ClCompile Include="src\Voyager\Core\UUID.cpp" />
     <ClCompile Include="src\Voyager\Core\Window.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Voyager\ImGui\ImGuiLayer.cpp" />

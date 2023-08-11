@@ -1,16 +1,24 @@
 #pragma once
 
+#include "SceneCamera.h"
+#include "Voyager/Core/UUID.h"
+#include "Voyager/Renderer/Texture.h"
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include "SceneCamera.h"
-#include "ScriptableEntity.h"
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/quaternion.hpp>
-#include "Voyager/Renderer/Texture.h"
 
 namespace Voyager {
 
+	struct IDComponent
+	{
+		UUID ID;
+
+		IDComponent() = default;
+		IDComponent(const IDComponent&) = default;
+	};
 	struct TagComponent
 	{
 		std::string Tag;
@@ -64,6 +72,7 @@ namespace Voyager {
 		CameraComponent(const CameraComponent&) = default;
 	};
 
+	class ScriptableEntity;
 	struct NativeScriptComponent
 	{
 		ScriptableEntity* Instance = nullptr;

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "entt.hpp"
 #include "Voyager/Core/Timestep.h"
+#include "Voyager/Core/UUID.h"
 #include "Voyager/Renderer/EditorCamera.h"
+#include "entt.hpp"
 
 class b2World;
 
@@ -17,6 +18,7 @@ namespace Voyager {
 		~Scene();
 
 		Entity CreateEntity(const std::string& name = std::string());
+		Entity CreateEntityWithUUID(UUID uuid, const std::string& name = std::string());
 		void DestroyEntity(Entity entity);
 
 		void OnRuntimeStart();
